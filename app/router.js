@@ -7,6 +7,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('vlog');
+  this.route('about');
+  this.route('page-not-found',{path: '/*wildcard'});
 });
 
 export default Router;
