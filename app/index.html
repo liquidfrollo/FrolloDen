@@ -6,6 +6,13 @@
     <title>FrolloDen</title>
     <meta name="description" content="Home of moto fun and other hobbies!">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript">
+      var totalCount=23;
+      function ChangeIt(){
+        var num=Math.ceil(Math.random()*totalCount);
+        document.body.background='/Images/BG/BG'+num+'.jpg';
+      }
+      </script>
 
     {{content-for "head"}}
 
@@ -15,11 +22,16 @@
     {{content-for "head-footer"}}
   </head>
   <body>
+  <script class="background" type="text/javascript"> 
+    ChangeIt();
+  </script> 
     {{content-for "body"}}
 
     <script src="{{rootURL}}assets/vendor.js"></script>
     <script src="{{rootURL}}assets/frollo-den.js"></script>
 
     {{content-for "body-footer"}}
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
   </body>
 </html>
