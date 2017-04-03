@@ -11,7 +11,7 @@ export default class Vlogcontent extends Component {
 		};
 	}
 	componentWillMount() {
-		let apiKey = 'AIzaSyCq_V023hJGI941qnY4wJmyaqz0WK5sGbc';
+		let apiKey = 'AIzaSyCq_V023hJGI941qnY4wJmyaqz0WK5sGbc'; /** Must allow current IP **/
 		let channelId = 'UCv5DBirtU8jhUWMh2H2V2mw'
 		var url = 'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId='+channelId+'&key='+apiKey+'&order=date&maxResults=50';
 	    Request.get(url)
