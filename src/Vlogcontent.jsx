@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Request from 'superagent';
 import _ from 'lodash';
+import './VlogContent.css';
 
 
 export default class Vlogcontent extends Component {
@@ -30,20 +31,40 @@ export default class Vlogcontent extends Component {
 
 	posts(content) {
 		return (
-			<li>
-				{content.snippet.title}
-			</li>
+
+			<div className="vlogTiles">
+				<div className="vlogTilesContent" >
+					<li className="vlogTitle">
+						{content.snippet.title}
+					</li>
+					<li className="vlogImage">				
+						<img src={content.snippet.thumbnails.medium.url} alt="{content.snippet.title}" className="vlogImage"/>
+					</li>
+					<li className="vlogDescription">
+						{content.snippet.description}
+					</li>
+					<li className="vlogPublished">
+						{content.snippet.publishedAt}
+					</li>
+				</div>
+
+			</div>
 		);
 	}
 
 	render(){
-		var videos = _.map(this.state.content, this.posts);
+		let videos = _.map(this.state.content, this.posts);
+		console.log(this.state);
 		return(
 			<div>
-				<h2>Vlog</h2>
-				<ul>
-					{videos}
-				</ul>
+				<div className="vlogHeader">
+					<h2>Welcome to the Vlog check out the videos!</h2>
+				</div>
+				<div className="vlogTileContainer" key={this.posts}>
+					<ul key={this.posts}>
+						{videos}
+					</ul>
+				</div>
 			</div>
 		);
 
