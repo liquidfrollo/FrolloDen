@@ -30,10 +30,11 @@ export default class Vlogcontent extends Component {
 	}
 
 	posts(content) {
-		return (
+		let fullLink = "https://www.youtube.com/watch?v="+content.id.videoId;
 
+		return (
 			<div className="vlogTiles">
-				<div className="vlogTilesContent" >
+				<div className="vlogTilesContent" onClick={() => window.open(fullLink)}>
 					<li className="vlogTitle">
 						{content.snippet.title}
 					</li>

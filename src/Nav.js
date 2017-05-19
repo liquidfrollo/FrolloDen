@@ -10,8 +10,8 @@ export default class Nav extends Component {
 			<Router>
 				<div className="Nav">
           			<ul className="navItems">
-						<li><Link to="/Vlog">Vlog</Link></li>
-						<li><Link to="/About">About</Link></li>
+						<li className="navLink"><Link to="/Vlog">Vlog</Link></li>
+						<li className="navLink"><Link to="/About">About</Link></li>
 					</ul>
 					<Route path="/Vlog" component={Vlog} />
 					<Route path="/About" component={About} />
