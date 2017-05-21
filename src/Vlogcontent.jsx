@@ -35,11 +35,11 @@ export default class Vlogcontent extends Component {
 		return (
 			<div className="vlogTiles">
 				<div className="vlogTilesContent" onClick={() => window.open(fullLink)}>
-					<li className="vlogTitle">
-						{content.snippet.title}
-					</li>
 					<li className="vlogImage">				
 						<img src={content.snippet.thumbnails.medium.url} alt="{content.snippet.title}" className="vlogImage"/>
+					</li>
+					<li className="vlogTitle">
+						{content.snippet.title}
 					</li>
 					<li className="vlogDescription">
 						{content.snippet.description}

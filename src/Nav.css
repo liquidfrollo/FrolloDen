@@ -1,10 +1,22 @@
+.navHeader {
+	background-color: #424242;	
+	width: 100%;
+	position:fixed;
+	top:0px;
+	color: white;
+}
+
 .navItems {
 	list-style-type: none;
 }
 
+.logo {
+	position: center;
+	font-size: 30px;
+}
+
 .navLink {
 	font-size: 20px;
-	color: white;
 	margin: 0;
 	padding: 0;
 }
@@ -14,4 +26,9 @@ li a {
 	float: right;
 	padding: 5px;
 	margin: 5px;
+	color: white;
+}
+
+li a:hover {
+	color: #404040;
 }

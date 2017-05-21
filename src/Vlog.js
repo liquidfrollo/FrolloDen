@@ -6,7 +6,7 @@ export default class Vlog extends Component {
 	render() {
 		return(
 			<div>
-				<h2><Vlogcontent /></h2>
+				<h2 className="vlogTitle"><Vlogcontent /></h2>
 			</div>
 		);
 	}

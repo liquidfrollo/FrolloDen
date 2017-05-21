@@ -4,25 +4,29 @@
 }
 
 .vlogTiles {
-	margin: 3px;
-	padding: 2px;
-	background-color: rgba(242, 242, 242, 0.3);
+	background-color: rgba(242, 242, 242, 0.7);
 	display: inline-block;
 	margin: 0 0 1em;
 	width: 100%;
 	box-shadow: 2px 2px 4px 0;
+	border-radius: 5px;
 	list-style-type: none;
 	text-align: center;
 	vertical-align: middle;
 }
 
 .vlogTiles:hover {
-	background-color: #e2e2e2;
+	background-color: rgba(242, 242, 242, 0.9);
 }
 
+.vlogTilesContent {
+	margin: 3px;
+	padding: 5px;
+}
 .vlogTitle {
 	font-size: 20px;
 	margin: 2px 2px 2px 0;
+	color: black;
 }
 
 .vlogDescription {
@@ -32,7 +36,8 @@
 	white-space: nowrap;
 	overflow: hidden;
 	text-align: center;
-	margin: auto;	
+	margin: auto;
+	color: red;
 }
 
 .vlogPublished {

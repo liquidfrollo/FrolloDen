@@ -9,12 +9,18 @@ export default class Nav extends Component {
 		return (
 			<Router>
 				<div className="Nav">
-          			<ul className="navItems">
-						<li className="navLink"><Link to="/Vlog">Vlog</Link></li>
-						<li className="navLink"><Link to="/About">About</Link></li>
-					</ul>
-					<Route path="/Vlog" component={Vlog} />
-					<Route path="/About" component={About} />
+					<div className="navHeader">
+					<div className="logo">FrolloDen</div>
+	          			<ul className="navItems">
+	          				<li className="navLink"><Link to="/">Home</Link></li>
+							<li className="navLink"><Link to="/Vlog">Vlog</Link></li>
+							<li className="navLink"><Link to="/About">About</Link></li>
+						</ul>
+					</div>
+					<div className="contentBody">
+						<Route path="/Vlog" component={Vlog} />
+						<Route path="/About" component={About} />
+					</div>
 				</div>
 			</Router>
 		);
